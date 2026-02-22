@@ -1,14 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Awesome Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nordtech | Canberra Building & Construction</title>
     <style>
-        body { font-family: sans-serif; text-align: center; margin-top: 50px; }
-        h1 { color: #2ea44f; }
+        /* Basic Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #f4f4f4;
+        }
+
+        /* Navigation Bar */
+        header {
+            background: #222;
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .logo { font-size: 1.5rem; font-weight: bold; color: #ff8c00; }
+
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { color: #fff; text-decoration: none; font-weight: bold; }
+        nav ul li a:hover { color: #ff8c00; }
+
+        /* Hero Section */
+        .hero {
+            background: #333;
+            color: #fff;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; color: #ccc; }
+
+        /* Content Sections */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #ff8c00;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #222;
+            color: #ccc;
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>I built this website using code on GitHub.</p>
+
+    <header>
+        <nav>
+            <div class="logo">NORDTECH</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Building Canberra's Future</h1>
+        <p>Premium Construction & Project Management Services</p>
+    </section>
+
+    <div class="container">
+        <center><h2 class="section-title">Our Services</h2></center>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+            <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <h3>Residential</h3>
+                <p>Custom homes designed for the unique Canberra climate.</p>
+            </div>
+            <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <h3>Commercial</h3>
+                <p>Modern office fit-outs and structural engineering.</p>
+            </div>
+            <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <h3>Renovations</h3>
+                <p>Extending and upgrading existing properties with precision.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <p>&copy; 2026 Nordtech Building Company | Canberra, ACT</p>
+        <p>Email: contact@nordtech.example.com</p>
+    </footer>
+
 </body>
 </html>
